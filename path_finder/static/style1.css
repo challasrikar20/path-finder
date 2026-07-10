@@ -1,0 +1,104 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Segoe UI';
+    min-height:100vh;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+    color:white;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:600px;
+    margin:auto;
+    padding-top:60px;
+    text-align:center;
+}
+
+h1{
+    font-size:36px;
+    margin-bottom:30px;
+    text-shadow:0 0 10px #00c6ff;
+}
+
+.step{
+    display:none;
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(25px);
+    background:rgba(255,255,255,0.08);
+    box-shadow:0 0 30px rgba(0,0,0,0.6),0 0 20px rgba(0,198,255,0.3);
+}
+
+.step.active{
+    display:block;
+    border:2px solid #00c6ff;
+    box-shadow:0 0 25px #00c6ff;
+}
+
+input,select{
+    width:90%;
+    padding:10px;
+    margin:10px;
+    border-radius:8px;
+    border:none;
+}
+
+button{
+    padding:12px;
+    width:100%;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 20px #00c6ff;
+}
+
+.edge-row{
+    display:flex;
+    gap:10px;
+}
+
+.result{
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.4);
+}
+
+.graph{
+    margin-top:20px;
+    width:100%;
+    border-radius:10px;
+}
+
+/* loader */
+.loader{
+    border:6px solid rgba(255,255,255,0.2);
+    border-top:6px solid #00c6ff;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    margin:20px auto;
+    animation:spin 1s linear infinite;
+}
+
+.hidden{display:none;}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
